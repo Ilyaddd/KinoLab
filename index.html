@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KinoLab - Главная</title>
+    <link rel="icon" type="image/x-icon" href="img/logo/logo.ico">
+    <link rel="stylesheet" href="css/null.css">
+    <link rel="stylesheet" href="css/App.css">
+</head>
+
+<body>
+
+
+    <header>
+        <div class="inner-wrapper container">
+            <div class="logo-wrapper">
+                <a href="#">
+                    <img class="logo-img" src="img/logo/logo.png" />
+                    <h1 class="logo-title">Kinolab</h1>
+                </a>
+            </div>
+            <div class="header-burger">
+                <span></span>
+            </div>
+            <div class="header-menu-wrapper">
+                <nav class="header-menu">
+                    <div class="header-menu-item">
+                        <a class="item-text" href="#">Чтотоважное</a>
+                    </div>
+                    <div class="header-menu-item">
+                        <a class="item-text" href="#">Чтотоважное</a>
+                    </div>
+                    <div class="header-menu-item">
+                        <a class="item-text" href="#">Чтотоважное</a>
+                    </div>
+                    <div class="header-menu-item">
+                        <a class="item-text" href="#">Чтотоважное</a>
+                    </div>
+                    <div class="header-menu-item">
+                        <a class="item-text" href="#">Чтотоважное</a>
+                    </div>
+                </nav>
+            </div>
+    </header>
+
+    <main class="main container">
+        <!-- Начало слайдера -->
+        <div class="slider-wrapper">
+            <div class="slider">
+                <div class="slider-list">
+                  <div class="slider-track">
+                    <div class="slide active" data-slide-index="1"><a href="#">
+                        <h2 class="slide-title">Название фильма</h2>
+                        <img src="img/banners/banner_1.jpg" class="slide-img">
+                    </a></div>
+                    <div class="slide" data-slide-index="2"><a href="#">
+                        <h2 class="slide-title">Название фильма</h2>
+                        <img src="img/banners/banner_2.jpg" class="slide-img">
+                    </a></div>
+                    <div class="slide" data-slide-index="3"><a href="#">
+                        <h2 class="slide-title">Название фильма</h2>
+                        <img src="img/banners/banner_3.jpg" class="slide-img">
+                    </a></div>
+                    <div class="slide" data-slide-index="4"><a href="#">
+                        <h2 class="slide-title">Название фильма</h2>
+                        <img src="img/banners/banner_4.jpg" class="slide-img">
+                    </a></div>
+                    <div class="slide" data-slide-index="5"><a href="#">
+                        <h2 class="slide-title">Название фильма</h2>
+                        <img src="img/banners/banner_5.jpg" class="slide-img">
+                    </a></div>
+                  </div>
+                </div>
+                <div class="slider-arrows">
+                  <button type="button" class="prev__btn">
+                    <img src="img/down.svg"></button>
+                  <button type="button" class="next__btn">
+                      <img src="img/down.svg">
+                  </button>
+                </div>
+                <div class="slider-pagination">
+                    <span class="slider-pagination-item active"></span>
+                    <span class="slider-pagination-item"></span>
+                    <span class="slider-pagination-item"></span>
+                    <span class="slider-pagination-item"></span>
+                    <span class="slider-pagination-item"></span>
+                </div>
+              </div>
+        </div>
+        <!-- Конец слайдера -->
+        <form class="main__form">
+            <div class="main__search">
+                <input type="text" class="main__search_input">
+            </div>
+
+            <section class="main__filter">
+                <div class="main__filter_choice">
+                    <h3 class="main__filter_name">Категории</h3>
+                    <div class="main__filter_wrapper">
+                        <ul class="main__filter_items">
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="C1_1">
+                                    <input type="checkbox" id="C1_1" value="Боевик">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Боевик</p>
+                                </label>
+                            </li>
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="C1_2">
+                                    <input type="checkbox" id="C1_2" value="Детектив">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Детектив</p>
+                                </label>
+                            </li>
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="C1_3">
+                                    <input type="checkbox" id="C1_3" value="Драма">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Драма</p>
+                                </label>
+                            </li>
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="C1_4">
+                                    <input type="checkbox" id="C1_4" value="Ужас">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Ужас</p>
+                                </label>
+                            </li>
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="C1_5">
+                                    <input type="checkbox" id="C1_5" value="Комедия">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Комедия</p>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main__filter_choice">
+                    <h3 class="main__filter_name">Жанры</h3>
+                    <div class="main__filter_wrapper">
+                        <ul class="main__filter_items">
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="1">
+                                    <input type="checkbox" id="1" value="Боевик">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Боевик</p>
+                                </label>
+                            </li>
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="2">
+                                    <input type="checkbox" id="2" value="Детектив">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Детектив</p>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main__filter_choice">
+                    <h3 class="main__filter_name">Рейтинг</h3>
+                    <div class="main__filter_wrapper">
+                        <ul class="main__filter_items">
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="1">
+                                    <input type="checkbox" id="1" value="Боевик">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Боевик</p>
+                                </label>
+                            </li>
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="2">
+                                    <input type="checkbox" id="2" value="Детектив">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Детектив</p>
+                                </label>
+                            </li>
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="3">
+                                    <input type="checkbox" id="3" value="Драма">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Драма</p>
+                                </label>
+                            </li>
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="4">
+                                    <input type="checkbox" id="4" value="Ужас">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Ужас</p>
+                                </label>
+                            </li>
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="5">
+                                    <input type="checkbox" id="5" value="Комедия">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Комедия</p>
+                                </label>
+                            </li>
+                    </div>
+                    </ul>
+                </div>
+                <div class="main__filter_choice">
+                    <h3 class="main__filter_name">Год</h3>
+                    <div class="main__filter_wrapper">
+                        <ul class="main__filter_items">
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="1">
+                                    <input type="checkbox" id="1" value="Боевик">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Боевик</p>
+                                </label>
+                            </li>
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="2">
+                                    <input type="checkbox" id="2" value="Детектив">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Детектив</p>
+                                </label>
+                            </li>
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="3">
+                                    <input type="checkbox" id="3" value="Драма">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Драма</p>
+                                </label>
+                            </li>
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="4">
+                                    <input type="checkbox" id="4" value="Ужас">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Ужас</p>
+                                </label>
+                            </li>
+                            <li class="main__filter_btn">
+                                <label class="main__filter_item" for="5">
+                                    <input type="checkbox" id="5" value="Комедия">
+                                    <span class="main__filter_checkbox"></span>
+                                    <p class="main__filter_title">Комедия</p>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="filter__under-wrapper">
+                <ul class="filter__tags">
+                    <li class="filter__tags-item">раз
+                        <span class="filter__tags-item__cross"></span>
+                    </li>
+                    <li class="filter__tags-item">два
+                        <span class="filter__tags-item__cross"></span>
+                    </li>
+                    <li class="filter__tags-item">три
+                        <span class="filter__tags-item__cross"></span>
+                    </li>
+                    <li class="filter__tags-item">четыри
+                        <span class="filter__tags-item__cross"></span>
+                    </li>
+                    <li class="filter__tags-item">пять
+                        <span class="filter__tags-item__cross"></span>
+                    </li>
+                </ul>
+                <button class="filter__btn">Применить</button>
+            </div>
+        </form>
+        <!-- Начало Списка фильмов -->
+        <div class="wrapper__preview">   
+
+            <div class="preview">
+                <a href="#" class="card__wrapper">
+                    <div class="preview__info">                        
+                        <img src="img/posters/poster_1.jpg" class="card__pic">
+                        <div class="card__rating">
+                            <p>5.0</p>
+                        </div>
+                    </div>
+                    <div class="preview__popup">
+                        <h4 class="preview__popup-title">Название фильмаfffffffffffffffffffffffffffffffff</h4>
+                        <h5 class="preview__popup-genre">Жанр fffffffffffffffffffffffffffffffffffffffffffff</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="preview">
+                <a href="#" class="card__wrapper">
+                    <div class="preview__info">                        
+                        <img src="img/posters/poster_2.jpg" class="card__pic">
+                        <div class="card__rating">
+                            <p>5.0</p>
+                        </div>
+                    </div>
+                    <div class="preview__popup">
+                        <h4 class="preview__popup-title">Название фильма</h4>
+                        <h5 class="preview__popup-genre">Жанр</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="preview">
+                <a href="#" class="card__wrapper">
+                    <div class="preview__info">                        
+                        <img src="img/posters/poster_3.jpg" class="card__pic">
+                        <div class="card__rating">
+                            <p>5.0</p>
+                        </div>
+                    </div>
+                    <div class="preview__popup">
+                        <h4 class="preview__popup-title">Название фильма</h4>
+                        <h5 class="preview__popup-genre">Жанр</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="preview">
+                <a href="#" class="card__wrapper">
+                    <div class="preview__info">                        
+                        <img src="img/posters/poster_4.jpg" class="card__pic">
+                        <div class="card__rating">
+                            <p>5.0</p>
+                        </div>
+                    </div>
+                    <div class="preview__popup">
+                        <h4 class="preview__popup-title">Название фильма</h4>
+                        <h5 class="preview__popup-genre">Жанр</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="preview">
+                <a href="#" class="card__wrapper">
+                    <div class="preview__info">                        
+                        <img src="img/posters/poster_5.jpg" class="card__pic">
+                        <div class="card__rating">
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <div class="preview__popup">
+                        <h4 class="preview__popup-title">Название фильма</h4>
+                        <h5 class="preview__popup-genre">Жанр</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="preview">
+                <a href="#" class="card__wrapper">
+                    <div class="preview__info">                        
+                        <img src="img/posters/poster_6.jpg" class="card__pic">
+                        <div class="card__rating">
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <div class="preview__popup">
+                        <h4 class="preview__popup-title">Название фильма</h4>
+                        <h5 class="preview__popup-genre">Жанр</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="preview">
+                <a href="#" class="card__wrapper">
+                    <div class="preview__info">                        
+                        <img src="img/posters/poster_7.jpg" class="card__pic">
+                        <div class="card__rating">
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <div class="preview__popup">
+                        <h4 class="preview__popup-title">Название фильма</h4>
+                        <h5 class="preview__popup-genre">Жанр</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="preview">
+                <a href="#" class="card__wrapper">
+                    <div class="preview__info">                        
+                        <img src="img/posters/poster_8.jpg" class="card__pic">
+                        <div class="card__rating">
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <div class="preview__popup">
+                        <h4 class="preview__popup-title">Название фильма</h4>
+                        <h5 class="preview__popup-genre">Жанр</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="preview">
+                <a href="#" class="card__wrapper">
+                    <div class="preview__info">                        
+                        <img src="img/posters/poster_9.jpg" class="card__pic">
+                        <div class="card__rating">
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <div class="preview__popup">
+                        <h4 class="preview__popup-title">Название фильма</h4>
+                        <h5 class="preview__popup-genre">Жанр</h5>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <!-- Конец Списка фильмов -->
+    </main>
+    <footer>
+        <p class="copyright">Copyright © 2020 - 2021 KinoLab</p>
+    </footer>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
