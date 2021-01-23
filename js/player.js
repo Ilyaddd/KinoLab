@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const wrapper = document.querySelector('.player__wrapper')
     const video = document.querySelector('#player')
     const hotKeysHolder = document.querySelector('#hotkeys-holder')
-    const progress = document.querySelector('#player-progress')
     const remote = document.querySelector('.remote__wrapper')
     const popup = document.querySelector('#info-holder')
 
@@ -23,8 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const volumeImg = document.querySelector('#volume-img')
     const screenImg = document.querySelector('#screen-img')
     const curSpeed = document.querySelector('#speed')
-
-    hotKeysHolder.select
 
     video.addEventListener('timeupdate', progressUpdate)
     video.addEventListener('loadedmetadata', takeMetaData)
@@ -99,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
             video.muted = true
             volumeImg.setAttribute('src', 'img/player/volume_off.svg')
             showInfo('Звук: 0%')   
-        }
+        }        
     }
     
     // Изменение скорости
@@ -114,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }    
 
     // При движении полоски видео        
+    const pWrapper = document.querySelector('.progressbar__wrapper')
     const pLine = document.querySelector('.progress-line')
     const pDuration = document.querySelector('.progress-duration')
     const pBuffered = document.querySelector('.progress-buffered')
@@ -134,10 +132,47 @@ document.addEventListener('DOMContentLoaded', function () {
         pBtn.style.transform = `translateX(${c * pSec * lWidth / 100}px)`
         // Обновление времени
         document.querySelector('#curren-time').innerHTML = toNormalTime(video.currentTime)
+    }    
+    // Увеличение размера таймлайна при наведении
+    const pWrpIn = document.querySelector('.remote__wrapper-inner')
+    pWrapper.addEventListener('mouseover', pbOver)
+    pWrapper.addEventListener('mouseleave', pbLeave)
+    pWrpIn.addEventListener('mouseover', pbOverRemote)
+    pWrpIn.addEventListener('mouseleave', pbLeaveRemote)
+    let pRemote = document.querySelector('.player__remote')
+    let isFullScreen = false
+    function pbOver(){
+        pWrapper.style.height = '20px'
+        pLine.style.height = '20px'
+        pJumpBtn.style.height = '20px'
+        pDuration.style.height = '20px'
+        pBuffered.style.height = '20px'
+        pBtn.style.height = '30px'
+        pBtn.style.width = '30px'
+    }    
+    function pbLeave(){
+        pWrapper.style.height = '5px'
+        pLine.style.height = '5px'
+        pJumpBtn.style.height = '5px'
+        pDuration.style.height = '5px'
+        pBuffered.style.height = '5px'
+        pBtn.style.height = '15px'
+        pBtn.style.width = '15px'  
+    }
+    function pbOverRemote(){
+        if (isFullScreen){
+            pRemote.style.transform = 'translateY(0)'
+            pWrapper.style.transform = 'translate(-50%, 0)'
+        }
+    }
+    function pbLeaveRemote(){ 
+        if (isFullScreen){
+            pRemote.style.transform = 'translateY(100%)'
+            pWrapper.style.transform = 'translate(-50%, 1000%)'
+        }
     }
     // Клики для перемотри видео    
     pJumpBtn.addEventListener('click', videoRewind)
-
     function videoRewind(){
         let w = this.offsetWidth
         let o = event.offsetX
@@ -145,19 +180,40 @@ document.addEventListener('DOMContentLoaded', function () {
         video.currentTime = video.duration * (o / w)
         video.play()
     }
+    // Перетягивание бегунка по таймлайну
+    pBtn.addEventListener('dragstart', dragStart)
+    pBtn.addEventListener('drag', drag)
+    pBtn.addEventListener('dragend', dragEnd)
+    let offSetX
+    let runnerNow // Отступ бегунка слева (left: 0)
+    function dragStart(e){
+        offSetX = e.offsetX
+    }
+    function drag(e){
+        runnerNow = pBtn.style.left
+        // console.log(runnerNow);
+    }
+    function dragEnd(e){
+        pBtn.style.left = `${(runnerNow + e.offsetX - offSetX)}px`
+        console.log(pBtn.style.left);
+        // console.log(e.offsetX - offSetX);
+    }
 
     // Открыть/закрыть видео во весь экран
     function toggleFullScreen(){
         if(!document.fullscreenElement){
             screenImg.setAttribute('src', 'img/player/not_full_screen.svg')
             wrapper.requestFullscreen()
+            wrapper.classList.remove('use-hover')
+            isFullScreen = true
         }
         else{
             screenImg.setAttribute('src', 'img/player/full_screen.svg')
             document.exitFullscreen()
+            wrapper.classList.add('use-hover')
+            isFullScreen = false
         }
     }
-
     // Получение метаданных при загрузке страницы
     function takeMetaData(){
         // Запись нужного колличества нулей в зависимости от длинны видео
@@ -272,20 +328,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Показать информацию в попупе
     function showInfo(text){
+        if(this.timeout){
+            clearTimeout(this.timeout)
+            this.timeout = null
+        }
         popup.innerHTML = text
         popup.classList.add('active')
-        setTimeout(() => {
+        this.timeout = setTimeout(() => {
             popup.classList.remove('active')
         }, 600)
     }
 
-
-
 })
 
-/// Скорость стрелочками
 /// Инфа https://metanit.com/web/html5/7.3.php
 
+/// Скорость стрелочками
 /// Старт/стоп по левому клику
 /// Открыть в фул экран по правому клику
 /// Старт/стоп (пробел и энтер)
@@ -298,8 +356,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /// Звук 100%  (клавиша N)
 /// Вкл/выкл звук (клавиша M)
 /// Вкл/выкл фул скрин (клавиша F)
+/// Настроить фокус, что бы всегда работали хоткеи(('keydown', useHotKeys) для всего)
 
-// Настроить фокус, что бы всегда работали хоткеи(('keydown', useHotKeys) для всего)
 // Настроить нормально отображение скорости
-// Настроить попуп, что бы нормально скрывался
-// Починить remote в фул скрин режиме
+// Сделать перетаскивание

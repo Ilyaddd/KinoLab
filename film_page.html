@@ -65,19 +65,20 @@
                 </div>
             </div>
 
-            <div class="player__wrapper">
+            <div class="player__wrapper use-hover">
 
                 <video class="player" id="player" preload="auto" poster="" src="media/vids/vid.mp4"></video>
-
                 <div class="remote__wrapper">
                     <div id="info-holder" class="info-holder"></div>
                     <button id="hotkeys-holder"></button>
+                    <div class="remote__wrapper-inner">
+                        
                     <div class="progressbar__wrapper">
                         <div class="progressbar">
                             <div class="progress-line"></div>
                             <div class="progress-duration"></div>
                             <div class="progress-buffered"></div>
-                            <div class="progress-btn"></div>
+                            <div class="progress-btn" draggable="true"></div>
                             <div class="progress-jump-line"></div>
                         </div>
                     </div>
@@ -109,6 +110,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
                 
