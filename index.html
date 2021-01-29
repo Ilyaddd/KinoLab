@@ -96,8 +96,8 @@
             </div>
 
             <section class="main__filter">
-                <div class="main__filter_choice">
-                    <h3 class="main__filter_name">Категории</h3>
+                <div class="main__filter_choice" data-type="genre">
+                    <h3 class="main__filter_name">Жанры</h3>
                     <div class="main__filter_wrapper">
                         <ul class="main__filter_items">
                             <li class="main__filter_btn">
@@ -138,8 +138,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="main__filter_choice">
-                    <h3 class="main__filter_name">Жанры</h3>
+                <div class="main__filter_choice" data-type="director">
+                    <h3 class="main__filter_name">Режиссёры</h3>
                     <div class="main__filter_wrapper">
                         <ul class="main__filter_items">
                             <li class="main__filter_btn">
@@ -159,8 +159,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="main__filter_choice">
-                    <h3 class="main__filter_name">Рейтинг</h3>
+                <div class="main__filter_choice" data-type="actor">
+                    <h3 class="main__filter_name">Актёры</h3>
                     <div class="main__filter_wrapper">
                         <ul class="main__filter_items">
                             <li class="main__filter_btn">
@@ -201,13 +201,13 @@
                     </div>
                     </ul>
                 </div>
-                <div class="main__filter_choice">
+                <div class="main__filter_choice" data-type="year">
                     <h3 class="main__filter_name">Год</h3>
                     <div class="main__filter_wrapper">
                         <ul class="main__filter_items">
                             <li class="main__filter_btn">
-                                <label class="main__filter_item" for="1">
-                                    <input type="checkbox" id="1" value="Боевик">
+                                <label class="main__filter_item" for="2">
+                                    <input type="checkbox" id="2" value="Боевик">
                                     <span class="main__filter_checkbox"></span>
                                     <p class="main__filter_title">Боевик</p>
                                 </label>
@@ -246,21 +246,6 @@
             </section>
             <div class="filter__under-wrapper">
                 <ul class="filter__tags">
-                    <li class="filter__tags-item">раз
-                        <span class="filter__tags-item__cross"></span>
-                    </li>
-                    <li class="filter__tags-item">два
-                        <span class="filter__tags-item__cross"></span>
-                    </li>
-                    <li class="filter__tags-item">три
-                        <span class="filter__tags-item__cross"></span>
-                    </li>
-                    <li class="filter__tags-item">четыри
-                        <span class="filter__tags-item__cross"></span>
-                    </li>
-                    <li class="filter__tags-item">пять
-                        <span class="filter__tags-item__cross"></span>
-                    </li>
                 </ul>
                 <button class="filter__btn">Применить</button>
             </div>
@@ -401,7 +386,8 @@
     <footer>
         <p class="copyright">Copyright © 2020 - 2021 KinoLab</p>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/filters.js"></script>
 
 </body>
 

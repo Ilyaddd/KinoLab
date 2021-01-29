@@ -406,6 +406,7 @@ main {
   color: #fff;
 }
 .filter__tags-item {
+  cursor: pointer;
   position: relative;
   width: auto;
   font-size: 16px;
@@ -417,9 +418,6 @@ main {
   padding: 6px 28px 6px 12px;
   border-radius: 24px;
   background-color: #2e4055;
-}
-.filter__tags-item__cross {
-  cursor: pointer;
 }
 .filter__tags-item__cross::before, .filter__tags-item__cross::after {
   content: "";
@@ -480,8 +478,8 @@ main {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
 }
 .preview:hover .preview__info {
-  transform: scale(1.03);
   filter: blur(10px) grayscale(20%);
+  transform: scale(1.03);
 }
 .preview:hover .preview__info::before {
   opacity: 1;

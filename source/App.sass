@@ -369,6 +369,7 @@ main
         list-style: none
         color: #fff
     &__tags-item
+        cursor: pointer
         position: relative
         width: auto
         font-size: 16px
@@ -380,7 +381,6 @@ main
         border-radius: 24px
         background-color: #2e4055
         &__cross
-            cursor: pointer
             &::before,
             &::after
                 content: ''
@@ -435,8 +435,8 @@ main
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7)
         & .preview
             &__info
-                transform: scale(1.03)
                 filter: blur(10px) grayscale(20%)
+                transform: scale(1.03)
             &__info::before
                 opacity: 1
             &__popup-title
