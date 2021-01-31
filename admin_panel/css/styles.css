@@ -1,0 +1,205 @@
+@import 'null.css';
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap");
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.5rem;
+  background: #11181f;
+  font-family: "Exo 2", sans-serif;
+  color: #fff;
+}
+
+header {
+  height: 60px;
+  background-color: #15202c;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header p {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1470px;
+  padding: 0 10px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.tables {
+  position: relative;
+}
+.tables__wrapper {
+  border-radius: 10px;
+  background: #142130;
+  overflow: hidden;
+}
+.tables__title {
+  font-size: 2.8rem;
+  padding: 15px 20px;
+  text-align: center;
+  background: #192a56;
+}
+
+.table {
+  font-size: 2rem;
+  transition: 0.3s;
+}
+.table:hover {
+  background: #273c75;
+}
+.table a {
+  display: block;
+  padding: 15px 25px;
+}
+
+.tables__wrapper {
+  margin: 20px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.objects {
+  flex-grow: 1;
+  width: auto;
+  padding: 20px;
+  margin: 20px;
+  background: #142130;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.objects__remote {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+.objects__remote-title {
+  margin: 5px 15px;
+  font-size: 2rem;
+}
+
+.search {
+  width: 100%;
+  max-width: 750px;
+  height: 50px;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 2px solid #2c488f;
+  background: transparent;
+  color: #ffffff;
+  font-size: 1.7rem;
+  margin: 5px;
+  transition: 0.3s;
+}
+.search:hover, .search:focus {
+  background: #273c75;
+  border: 2px solid #273c75;
+}
+
+.btn {
+  height: 50px;
+  padding: 0 20px;
+  margin: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-user-select: none;
+          user-select: none;
+  border-radius: 8px;
+  background: transparent;
+  border: 2px solid #273c75;
+  transition: 0.3s;
+}
+.btn:hover {
+  color: #fff;
+  background: #15202c;
+  border: 2px solid #273c75;
+}
+
+.objects__list {
+  margin: 20px -20px;
+}
+.objects__items li {
+  height: 50px;
+  width: 100%;
+}
+.objects__item {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: 0.1s;
+}
+.objects__item:hover {
+  background: rgba(39, 60, 117, 0.35);
+}
+.objects__item > input[type=checkbox] {
+  display: none;
+}
+.objects__item > input[type=checkbox]:checked + .checkbox {
+  background: url("../img/checked.svg") 2px 2px/17px 17px no-repeat;
+  box-shadow: 0 0 10px #273c75;
+  background-color: rgba(39, 60, 117, 0.6);
+}
+
+.checkbox {
+  cursor: pointer;
+  margin: 0 30px;
+  height: 25px;
+  width: 25px;
+  background: transparent;
+  border: 2px solid #426ad6;
+  border-radius: 5px;
+  position: relative;
+  transition: background 0s, background-color 0.2s, box-shadow 0.1s;
+}
+
+.object-link {
+  color: #fff;
+  font-size: 2rem;
+  color: red;
+  position: relative;
+  display: flex;
+}
+.object-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  right: 0;
+  bottom: -3px;
+  height: 3px;
+  background-color: #426ad6;
+  transition: 0.3s;
+}
+.object-link:hover::before {
+  left: 0;
+  width: 100%;
+}
+
+.object__pages {
+  display: flex;
+  position: relative;
+  padding: 10px 25px;
+}
+.object__page {
+  margin: 0 5px;
+  padding: 10px;
+  background: #273c75;
+  border-radius: 5px;
+}
+.objects__all, .objects__show {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 1.7rem;
+  color: #bbb;
+}

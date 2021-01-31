@@ -1,0 +1,193 @@
+@import 'null.css'
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap')
+
+$sub-bg: #15202c
+$light-blue: #273c75
+$ultra-blue: #426ad6
+$shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
+
+html
+    font-size: 10px
+
+body
+    font-size: 1.5rem
+    background: #11181f
+    font-family: 'Exo 2', sans-serif
+    color: #fff
+    
+header
+    height: 60px
+    background-color: $sub-bg
+    box-shadow: $shadow
+    display: flex
+    justify-content: center
+    align-items: center
+    & p
+        font-size: 2.5rem
+        font-weight: bold
+
+// Страница с таблицами  
+
+.container
+    max-width: 1470px
+    padding: 0 10px
+    margin: auto
+    margin-top: 20px
+
+
+.tables
+    position: relative
+
+    &__wrapper
+        border-radius: 10px
+        background: #142130
+        overflow: hidden
+
+    &__title
+        font-size: 2.8rem
+        padding: 15px 20px
+        text-align: center
+        background: #192a56
+
+
+.table
+    font-size: 2rem
+    transition: 0.3s
+    &:hover
+        background: $light-blue
+    & a
+        display: block
+        padding: 15px 25px
+        
+    
+// Страница с полями
+
+.tables__wrapper
+    margin: 20px
+
+.content
+    display: flex
+    flex-wrap: wrap 
+    width: 100%
+
+.objects
+    flex-grow: 1
+    width: auto
+    padding: 20px
+    margin: 20px
+    background: #142130
+    border-radius: 5px
+    overflow: hidden
+    &__remote
+        display: flex
+        flex-wrap: wrap
+        padding: 0 10px
+        &-title
+            margin: 5px 15px
+            font-size: 2rem
+
+.search
+    width: 100%
+    max-width: 750px
+    height: 50px
+    padding: 0 10px
+    border-radius: 8px
+    border: 2px solid #2c488f
+    background: transparent
+    color: #ffffff
+    font-size: 1.7rem
+    margin: 5px
+    transition: 0.3s
+    &:hover, &:focus
+        background: $light-blue
+        border: 2px solid $light-blue
+    
+.btn
+    height: 50px
+    padding: 0 20px
+    margin: 5px
+    font-size: 1.5rem
+    font-weight: bold
+    color: rgba(#fff, 0.8 )
+    user-select: none
+    border-radius: 8px
+    background: transparent
+    border: 2px solid $light-blue
+    transition: 0.3s
+    &:hover
+        color: #fff
+        background: $sub-bg
+        border: 2px solid $light-blue
+
+.objects
+
+    &__list
+        margin: 20px -20px
+    &__items
+        & li
+            height: 50px
+            width: 100%   
+    &__item
+        cursor: default
+        display: flex
+        align-items: center
+        height: 100%
+        transition: 0.1s
+        &:hover
+            background: rgba($light-blue, 0.35)
+        & > input[type='checkbox']
+            display: none
+            &:checked + .checkbox
+                background: url('../img/checked.svg') 2px 2px / 17px 17px no-repeat
+                box-shadow: 0 0 10px $light-blue
+                background-color: rgba($light-blue, 0.6)
+   
+
+.checkbox
+    cursor: pointer
+    margin: 0 30px
+    height: 25px
+    width: 25px
+    background: transparent
+    border: 2px solid $ultra-blue
+    border-radius: 5px
+    position: relative
+    transition: background 0s, background-color .2s, box-shadow .1s
+
+.object-link
+    color: #fff
+    font-size: 2rem
+    color: red
+    position: relative
+    display: flex
+    &::before
+        content: ''
+        position: absolute
+        width: 0
+        right: 0
+        bottom: -3px
+        height: 3px
+        background-color: $ultra-blue
+        transition: .3s
+    &:hover::before
+        left: 0
+        width: 100%
+
+.object
+    &__pages
+        display: flex
+        position: relative
+        padding: 10px 25px
+    &__page
+        margin: 0 5px
+        padding: 10px
+        background: $light-blue
+        border-radius: 5px
+    &s
+        &__all,
+        &__show
+            display: flex
+            align-items: center
+            padding: 0 10px
+            font-size: 1.7rem
+            color: #bbb
