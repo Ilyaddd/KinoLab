@@ -116,7 +116,7 @@ header
     transition: 0.3s
     &:hover
         color: #fff
-        background: $sub-bg
+        background: $light-blue
         border: 2px solid $light-blue
 
 .objects
@@ -154,26 +154,25 @@ header
     position: relative
     transition: background 0s, background-color .2s, box-shadow .1s
 
-.object-link
-    color: #fff
-    font-size: 2rem
-    color: red
-    position: relative
-    display: flex
-    &::before
-        content: ''
-        position: absolute
-        width: 0
-        right: 0
-        bottom: -3px
-        height: 3px
-        background-color: $ultra-blue
-        transition: .3s
-    &:hover::before
-        left: 0
-        width: 100%
-
 .object
+    &-link
+        color: #fff
+        font-size: 2rem
+        position: relative
+        display: flex
+        &::before
+            content: ''
+            position: absolute
+            width: 0
+            right: 0
+            bottom: -3px
+            height: 3px
+            background-color: $ultra-blue
+            transition: .3s
+        &:hover::before
+            left: 0
+            width: 100%
+            
     &__pages
         display: flex
         position: relative

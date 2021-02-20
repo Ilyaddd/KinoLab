@@ -121,7 +121,7 @@ header p {
 }
 .btn:hover {
   color: #fff;
-  background: #15202c;
+  background: #273c75;
   border: 2px solid #273c75;
 }
 
@@ -166,7 +166,6 @@ header p {
 .object-link {
   color: #fff;
   font-size: 2rem;
-  color: red;
   position: relative;
   display: flex;
 }
@@ -184,7 +183,6 @@ header p {
   left: 0;
   width: 100%;
 }
-
 .object__pages {
   display: flex;
   position: relative;
