@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="css/null.css">
     <link rel="stylesheet" href="css/App.css">
     <script defer src="js/slider.js"></script>
+    <script defer src='js/dropDown_forPhone.js'></script>    
     <script defer src="js/filters.js"></script>
+    <script defer src='js/request_films.js'></script>
 </head>
 
 <body>
@@ -248,7 +250,7 @@
             <div class="filter__under-wrapper">
                 <ul class="filter__tags">
                 </ul>
-                <button class="filter__btn">Применить</button>
+                <button class="filter__btn btn">Применить</button>
             </div>
         </form>
         <!-- Начало Списка фильмов -->
@@ -380,9 +382,52 @@
                     </div>
                 </a>
             </div>
+            <div class="preview">
+                <a href="#" class="card__wrapper">
+                    <div class="preview__info">                        
+                        <img src="img/posters/poster_10.jpg" class="card__pic">
+                        <div class="card__rating">
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <div class="preview__popup">
+                        <h4 class="preview__popup-title">Название фильма</h4>
+                        <h5 class="preview__popup-genre">Жанр</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="preview">
+                <a href="#" class="card__wrapper">
+                    <div class="preview__info">                        
+                        <img src="img/posters/poster_11.jpg" class="card__pic">
+                        <div class="card__rating">
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <div class="preview__popup">
+                        <h4 class="preview__popup-title">Название фильма</h4>
+                        <h5 class="preview__popup-genre">Жанр</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="preview">
+                <a href="#" class="card__wrapper">
+                    <div class="preview__info">                        
+                        <img src="img/posters/poster_12.jpg" class="card__pic">
+                        <div class="card__rating">
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <div class="preview__popup">
+                        <h4 class="preview__popup-title">Название фильма</h4>
+                        <h5 class="preview__popup-genre">Жанр</h5>
+                    </div>
+                </a>
+            </div>
 
         </div>
         <!-- Конец Списка фильмов -->
+        <button id="more-btn" class="btn">Ещё</button>
     </main>
     <footer>
         <p class="copyright">Copyright © 2020 - 2021 KinoLab</p>

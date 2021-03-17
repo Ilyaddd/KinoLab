@@ -400,22 +400,22 @@ main
             &::after
                 transform: rotate(-45deg)
 
-    &__btn
-        display: block
-        height: 50px
-        width: 23%
-        min-width: 260px
-        font-size: 2.5rem
-        font-weight: bold
-        color: rgba(#fff, 0.7 )
-        user-select: none
-        border-radius: 10px
-        background: transparent
-        border: 2px solid $purpp
-        transition: 0.3s
-        &:hover
-            color: #fff
-            background: $purpp
+.btn
+    display: block
+    height: 50px
+    width: 23%
+    min-width: 260px
+    font-size: 2.5rem
+    font-weight: bold
+    color: rgba(#fff, 0.7 )
+    user-select: none
+    border-radius: 10px
+    background: transparent
+    border: 2px solid $purpp
+    transition: 0.3s
+    &:hover
+        color: #fff
+        background: $purpp
 
 // Начало блоков с фильмами
 .wrapper__preview
@@ -552,6 +552,9 @@ main
                 top: 0
                 left: -28px
                 background: url(../img/rating_star.svg) 0 0 / 20px 20px no-repeat
+
+#more-btn
+    margin: 0 auto 30px
 
 footer
     height: 80px
@@ -899,3 +902,4 @@ footer
 #speed
     font-size: 1.8rem
     font-weight: bold
+

@@ -2,6 +2,7 @@
 // Создание параметра
 let choices = document.querySelectorAll(".main__filter_item"); // Контейнер с чёйсами
 const tagsList = document.querySelector(".filter__tags"); // Список пояляющихся фильтров
+const search = document.querySelector('.main__search_input')
 
 for (let i = 0; i < choices.length; i++) {
     createElem(
@@ -48,6 +49,7 @@ function removeElem(context) {
 
 // Поиск по параметрам
 let filters = {
+    text: '',
     genres: [],
     directors: [],
     actors: [],
@@ -55,7 +57,7 @@ let filters = {
 };
 function takeFiltes() {
     // Очитка объедка от старых фильтров
-
+    filters.text = search.value
     tagsList.querySelectorAll(".filter__tags-item").forEach((item) => {
         switch (item.getAttribute("data-type")) {
             case "genre":
@@ -81,18 +83,4 @@ document.querySelector(".filter__btn").addEventListener("click", (e) => {
     takeFiltes();
 });
 
-// Закрытие дропдаун меню по клику на мобилках
-function closeChoice(choice){
-    const wrapper = choice.querySelector('.main__filter_wrapper')
-    if (wrapper.clientHeight > 0)
-        wrapper.classList.add('squeeze')
-    else
-        wrapper.classList.remove('squeeze') 
-}
 
-document.querySelectorAll('.main__filter_choice').forEach( el => {
-    el.addEventListener('touchstart', function() {
-        let menuHeight = this.querySelector('.main__filter_wrapper').clientHeight          
-        closeChoice(this)                    
-    })
-})

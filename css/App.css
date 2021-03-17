@@ -440,7 +440,8 @@ main {
 .filter__tags-item__cross::after {
   transform: rotate(-45deg);
 }
-.filter__btn {
+
+.btn {
   display: block;
   height: 50px;
   width: 23%;
@@ -455,7 +456,7 @@ main {
   border: 2px solid #7158e2;
   transition: 0.3s;
 }
-.filter__btn:hover {
+.btn:hover {
   color: #fff;
   background: #7158e2;
 }
@@ -606,6 +607,10 @@ main {
   top: 0;
   left: -28px;
   background: url(../img/rating_star.svg) 0 0/20px 20px no-repeat;
+}
+
+#more-btn {
+  margin: 0 auto 30px;
 }
 
 footer {
