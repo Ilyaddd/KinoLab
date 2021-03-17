@@ -267,3 +267,100 @@ header p {
     font-size: 2rem;
   }
 }
+/* EDIT PAGE */
+.fields__wrapper {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  font-size: 2rem;
+}
+
+.field__title {
+  margin: 0 0 3px;
+}
+
+.input {
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+  padding: 0 10px;
+  margin: 5px 0 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  background: transparent;
+  border: 2px solid #273c75;
+  transition: 0.3s;
+}
+.input:hover {
+  color: #fff;
+  background: #273c75;
+  border: 2px solid #273c75;
+}
+.input:focus {
+  color: #fff;
+  background: #273c75;
+  border: 2px solid #273c75;
+}
+
+.textarea {
+  resize: none;
+  width: 100%;
+  height: 500px;
+  padding: 10px;
+  margin: 5px 0 30px;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  background: transparent;
+  border: 2px solid #273c75;
+  transition: 0.3s;
+}
+.textarea:hover {
+  color: #fff;
+  background: #273c75;
+  border: 2px solid #273c75;
+}
+.textarea:focus {
+  color: #fff;
+  background: #273c75;
+  border: 2px solid #273c75;
+}
+
+.choose__btn {
+  margin-top: 5px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-user-select: none;
+          user-select: none;
+  border-radius: 8px;
+  background: transparent;
+  border: 2px solid #273c75;
+  transition: 0.3s;
+}
+.choose__btn:hover {
+  color: #fff;
+  background: #273c75;
+  border: 2px solid #273c75;
+}
+.choose__file {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.choose__title {
+  display: inline-flex;
+  margin-left: 5px;
+  font-size: 1.7rem;
+}

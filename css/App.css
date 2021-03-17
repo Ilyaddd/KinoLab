@@ -52,6 +52,7 @@ main {
   display: flex;
   height: 100%;
   margin-left: auto;
+  z-index: 2 !important;
 }
 
 .logo-wrapper a {
@@ -670,7 +671,6 @@ footer {
     height: 100%;
     background: #15202c;
     top: -100%;
-    z-index: 1;
     transition: 0.3s;
   }
   .header-menu-wrapper.active {
