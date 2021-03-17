@@ -319,6 +319,10 @@ main {
 .main__filter_choice:hover .main__filter_name::after {
   transform: rotate(180deg);
 }
+.main__filter_choice .squeeze {
+  max-height: 0;
+  transition: 0.3s;
+}
 .main__filter_name {
   font-size: 2.5rem;
   padding: 12.5px 25px;

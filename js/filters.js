@@ -81,17 +81,17 @@ document.querySelector(".filter__btn").addEventListener("click", (e) => {
     takeFiltes();
 });
 
-// Закрытие дропдаун меню
+// Закрытие дропдаун меню по клику на мобилках
 function closeChoice(choice){
-    choice.querySelector('.main__filter_wrapper').style.boxShadow = ''
-    choice.querySelector('.main__filter_items').style.cssText = `
-        box-shadow: 0;
-        max-height: 0;`
-    choice.querySelector('.main__filter_name').style.transform = ''
+    const wrapper = choice.querySelector('.main__filter_wrapper')
+    if (wrapper.clientHeight > 0)
+        wrapper.classList.add('squeeze')
+    else
+        wrapper.classList.remove('squeeze') 
 }
 
 document.querySelectorAll('.main__filter_choice').forEach( el => {
-    el.addEventListener('click', function() {
+    el.addEventListener('touchstart', function() {
         let menuHeight = this.querySelector('.main__filter_wrapper').clientHeight          
         closeChoice(this)                    
     })
