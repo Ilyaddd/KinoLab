@@ -6,7 +6,7 @@ btn = $('#more-btn')
 previewList = $('.wrapper__preview')
 
 // Ajax запрос новых фильмов
-function getData(){
+function getFilms(){
     // Подсчёт загруженных фильмов для правильного ajax запроса
     number = document.querySelectorAll('.preview').length
     URL = 'https://jsonplaceholder.typicode.com/photos/'
@@ -49,5 +49,5 @@ function generatePreview(film){
 }
 
 btn.addEventListener('click', () => {
-    getData()
+    getFilms()
 })
