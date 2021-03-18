@@ -75,7 +75,7 @@ function takeFiltes() {
         }
     });
 
-    console.log(filters);
+    // console.log(filters);
 }
 
 document.querySelector(".filter__btn").addEventListener("click", (e) => {

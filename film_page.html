@@ -13,6 +13,13 @@
 
 <body>
 
+    <img src="img/Михаил.png" style="
+        position: absolute;
+        width: 300px;
+        top: 560px;
+        left: 1300px;
+        z-index: 100;
+    ">
 
     <header>
         <div class="inner-wrapper container">
@@ -69,7 +76,7 @@
 
             <div class="player__wrapper use-hover">
 
-                <video class="player" id="player" preload="auto" poster="" src="media/Galaxy.mp4"></video>
+                <video class="player" id="player" preload="auto" poster="" src="media/2.mp4"></video>
                 <div class="remote__wrapper">
                     <div id="info-holder" class="info-holder"></div>
                     <button id="hotkeys-holder"></button>
@@ -115,7 +122,18 @@
                 </div>
                 </div>
             </div>
-                
+            
+            <form method="POST" class="fields__wrapper">
+                <div class="field">
+                    <p class="field__title">Название фильма</p>
+                    <input type="text" class="input">
+                </div>
+    
+                <div class="field">
+                    <p class="field__title">Название фильма</p>
+                    <textarea type="text" class="textarea"></textarea>
+                </div>
+            </form>
         </div>
     </main>
     <footer>

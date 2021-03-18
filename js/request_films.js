@@ -32,7 +32,7 @@ function generatePreview(film){
     let preview = document.createElement('div')
     preview.classList.add('preview')
     preview.innerHTML = `
-    <a href="#" class="card__wrapper">
+    <a href="${film.url}" class="card__wrapper">
     <div class="preview__info">                        
         <img src="${film.url}" class="card__pic">
         <div class="card__rating">

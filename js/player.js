@@ -195,18 +195,25 @@ function videoRewind() {
 }
 
 // Открыть/закрыть видео во весь экран
+let scrollPageTo = null
 function toggleFullScreen() {
     if (!document.fullscreenElement) {
+        scrollPageTo = self.pageYOffset        
         screenImg.setAttribute("src", "img/player/not_full_screen.svg");
         wrapper.requestFullscreen();
         wrapper.classList.remove("use-hover");
         isFullScreen = true;
     } else {
         screenImg.setAttribute("src", "img/player/full_screen.svg");
-        document.exitFullscreen();
+        // выход из полноэкранного режима
+        document.exitFullscreen()
+            .then( () => {
+                // Скролим страницу до того состояния, которое было до открытия фул экрана
+                window.scrollTo(0, scrollPageTo)
+            })
         wrapper.classList.add("use-hover");
         isFullScreen = false;
-    }
+    }    
 }
 // Получение метаданных при загрузке страницы
 function takeMetaData() {
