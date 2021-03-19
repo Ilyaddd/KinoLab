@@ -13,6 +13,7 @@ document
 // Начало слайдера
 let sliderTrack = document.querySelector(".slider-track"); // Контейнер со всеми слайдами
 let slides = document.querySelectorAll(".slide") // Массив всех слайдов
+slides[0].classList.add('active')
 // Длина слайда + отступ между слайдами 30px  
 let sliderWidth = null
 // Временная заглушына с интервалом
