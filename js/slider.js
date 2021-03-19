@@ -12,12 +12,20 @@ document
 
 // Начало слайдера
 let sliderTrack = document.querySelector(".slider-track"); // Контейнер со всеми слайдами
-let slides = document.querySelectorAll(".slide"); // Массив всех слайдов
+let slides = document.querySelectorAll(".slide") // Массив всех слайдов
+// Длина слайда + отступ между слайдами 30px  
+let sliderWidth = null
+// Временная заглушына с интервалом
+setTimeout(() => { 
+    slideWidth = slides[0].clientWidth + 30;
+}, 200)
 const numOfSlides = slides.length; // Колличество слайдов
 let paginations = document
     .querySelector(".slider-pagination")
     .querySelectorAll(".slider-pagination-item"); // Точки для навигации(снизу)
-let slideWidth = slides[0].clientWidth + 30; // Длина слайда + отступ между слайдами 30px
+    
+    
+  
 // Функция перелистывания слайдов в обе стороны
 function changeSlide(forward) {
     let active =
@@ -38,9 +46,8 @@ function changeSlide(forward) {
         else {
             slides[active].classList.remove("active"); // Удаляем класс active у активного слайда
             slides[++active].classList.add("active"); // Добавляем класс active следующему слайду
-            sliderTrack.style.transform = `translate3D(-${
-                slideWidth * active
-            }px, 0, 0)`; // Умножаем длину слайда на его номер и двагаем контейнер со слайдами на получившееся значение
+            console.log(slideWidth)           
+            sliderTrack.style.transform = `translate3D(-${slideWidth * active}px, 0, 0)`; // Умножаем длину слайда на его номер и двагаем контейнер со слайдами на получившееся значение
             paginations[active - 1].classList.remove("active"); // Удаляем класс active у нынешней точки
             paginations[active].classList.add("active"); // Добавляем класс active слудующей точке
         }

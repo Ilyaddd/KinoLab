@@ -274,6 +274,9 @@ header p {
   font-size: 2rem;
 }
 
+.field {
+  margin-bottom: 30px;
+}
 .field__title {
   margin: 0 0 3px;
 }
@@ -283,7 +286,7 @@ header p {
   max-width: 500px;
   height: 50px;
   padding: 0 10px;
-  margin: 5px 0 30px;
+  margin: 5px 0 0;
   font-size: 1.5rem;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.8);
@@ -308,7 +311,7 @@ header p {
   width: 100%;
   height: 500px;
   padding: 10px;
-  margin: 5px 0 30px;
+  margin: 5px 0 0;
   font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
@@ -328,6 +331,7 @@ header p {
 }
 
 .choose__btn {
+  cursor: pointer;
   margin-top: 5px;
   position: relative;
   display: inline-flex;
@@ -350,17 +354,27 @@ header p {
   border: 2px solid #273c75;
 }
 .choose__file {
-  cursor: pointer;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  display: none;
 }
 .choose__title {
   display: inline-flex;
   margin-left: 5px;
   font-size: 1.7rem;
+}
+
+.edit__btns {
+  margin-bottom: 50px;
+  display: flex;
+  margin-left: auto;
+}
+
+.save__btn {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 50px;
+}
+
+.delete__btn {
+  display: block;
+  margin-left: auto;
 }
