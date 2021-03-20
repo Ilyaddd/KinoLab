@@ -22,9 +22,11 @@ header
     display: flex
     justify-content: center
     align-items: center
-    & p
-        font-size: 2.5rem
-        font-weight: bold
+.header__text
+    font-size: 2.5rem
+    font-weight: bold
+    cursor: pointer
+    user-select: none
 
 // Страница с таблицами  
 
@@ -124,33 +126,33 @@ header
     &__list
         margin: 0 -20px 20px
     &__items
-        height: 50px
         width: 100%
     &__item
-        cursor: default
         display: flex
         align-items: center
         height: 100%
+        padding: 30px
+        position: relative
         transition: 0.1s
         &:hover
             background: rgba($light-blue, 0.35)
-        & > input[type='checkbox']
-            display: none
-            &:checked + .checkbox
-                background: url('../img/checked.svg') 2px 2px / 17px 17px no-repeat
-                box-shadow: 0 0 10px $light-blue
-                background-color: rgba($light-blue, 0.6)
+        // & > input[type='checkbox']
+        //     display: none
+        //     &:checked + .checkbox
+        //         background: url('../img/checked.svg') 2px 2px / 17px 17px no-repeat
+        //         box-shadow: 0 0 10px $light-blue
+        //         background-color: rgba($light-blue, 0.6)
 
-.checkbox
-    cursor: pointer
-    margin: 0 30px
-    height: 25px
-    min-width: 25px
-    background: transparent
-    border: 2px solid $ultra-blue
-    border-radius: 5px
-    position: relative
-    transition: background 0s, background-color .2s, box-shadow .1s
+// .checkbox
+//     cursor: pointer
+//     margin: 0 30px
+//     height: 25px
+//     min-width: 25px
+//     background: transparent
+//     border: 2px solid $ultra-blue
+//     border-radius: 5px
+//     position: relative
+//     transition: background 0s, background-color .2s, box-shadow .1s
 
 .link
     position: relative
@@ -167,10 +169,15 @@ header
         left: 0
         width: 100%
 .object
+    display: flex
+    align-items: center
     font-size: 2rem
     color: #fff
-    display: flex
-    overflow: hidden
+    position: absolute
+    top: 0
+    left: 30px
+    bottom: 0
+    right: 0
     & p        
         text-overflow: ellipsis
         white-space: nowrap
@@ -178,7 +185,6 @@ header
     &__pages
         display: flex
         align-items: center
-        padding: 10px 25px
         &-items
             display: flex
         &-info
@@ -215,6 +221,7 @@ header
 
 #add
     margin-left: auto
+    line-height: 45px    
 
 @media ( max-width: 1168px )
     .tables__wrapper
@@ -231,7 +238,7 @@ header
 @media ( max-width: 570px )
     .object__pages
         flex-direction: column
-    header p
+    .header__text
         font-size: 2rem
 
 

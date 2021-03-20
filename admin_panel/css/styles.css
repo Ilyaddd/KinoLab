@@ -19,9 +19,13 @@ header {
   justify-content: center;
   align-items: center;
 }
-header p {
+
+.header__text {
   font-size: 2.5rem;
   font-weight: bold;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
 }
 
 .container {
@@ -110,38 +114,18 @@ header p {
   margin: 0 -20px 20px;
 }
 .objects__items {
-  height: 50px;
   width: 100%;
 }
 .objects__item {
-  cursor: default;
   display: flex;
   align-items: center;
   height: 100%;
+  padding: 30px;
+  position: relative;
   transition: 0.1s;
 }
 .objects__item:hover {
   background: rgba(39, 60, 117, 0.35);
-}
-.objects__item > input[type=checkbox] {
-  display: none;
-}
-.objects__item > input[type=checkbox]:checked + .checkbox {
-  background: url("../img/checked.svg") 2px 2px/17px 17px no-repeat;
-  box-shadow: 0 0 10px #273c75;
-  background-color: rgba(39, 60, 117, 0.6);
-}
-
-.checkbox {
-  cursor: pointer;
-  margin: 0 30px;
-  height: 25px;
-  min-width: 25px;
-  background: transparent;
-  border: 2px solid #426ad6;
-  border-radius: 5px;
-  position: relative;
-  transition: background 0s, background-color 0.2s, box-shadow 0.1s;
 }
 
 .link {
@@ -163,10 +147,15 @@ header p {
 }
 
 .object {
+  display: flex;
+  align-items: center;
   font-size: 2rem;
   color: #fff;
-  display: flex;
-  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  bottom: 0;
+  right: 0;
 }
 .object p {
   text-overflow: ellipsis;
@@ -176,7 +165,6 @@ header p {
 .object__pages {
   display: flex;
   align-items: center;
-  padding: 10px 25px;
 }
 .object__pages-items {
   display: flex;
@@ -219,6 +207,7 @@ header p {
 
 #add {
   margin-left: auto;
+  line-height: 45px;
 }
 
 @media (max-width: 1168px) {
@@ -245,7 +234,7 @@ header p {
     flex-direction: column;
   }
 
-  header p {
+  .header__text {
     font-size: 2rem;
   }
 }
